@@ -6,12 +6,14 @@ location ~ ^(?<cache>\/web-apps\/apps\/(?!api\/documents\/api\.js$).*)$ {
   return 302 $the_scheme://$the_host$the_prefix/M4_PRODUCT_VERSION-$cache_tag$cache$is_args$args;
 }
 
-#disable caching for api.js
-location ~ ^(\/[\d]+\.[\d]+\.[\d]+[\.|-][\w]+)?\/(web-apps\/apps\/api\/documents\/api\.js)$ {
+#disable caching for api.js (the unversioned URL that integrators load: it carries the
+#version path of everything else; the versioned copy that the editor frame loads is
+#immutable like the other static files)
+location ~ ^\/(web-apps\/apps\/api\/documents\/api\.js)$ {
   expires off;
   add_header Cache-Control "no-store, no-cache, must-revalidate";
   # gzip_static on;
-  alias  M4_DS_ROOT/$2;
+  alias  M4_DS_ROOT/$1;
 }
 
 location ~ ^(\/[\d]+\.[\d]+\.[\d]+[\.|-][\w]+)?\/(document_editor_service_worker.js)$ {
