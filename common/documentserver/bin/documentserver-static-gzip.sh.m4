@@ -6,8 +6,9 @@ NGINX_ONLYOFFICE_PATH="/etc/M4_DS_PREFIX/nginx"
 cd ${DIR}
 # (Re)compress only what changed since its .gz was made (an update or a rebuild replaces the
 # file but leaves its old .gz, which gzip_static would keep serving), on all cores.
+# gzip -k gives the .gz the mtime of its source: up to date = same mtime, not newer.
 gzip_stale() {
-  xargs -0 -r -n 64 -P "$(nproc)" sh -c 'for f; do [ "$f.gz" -nt "$f" ] || gzip -kf9 "$f"; done' _
+  xargs -0 -r -n 64 -P "$(nproc)" sh -c 'for f; do [ -e "$f.gz" ] && ! [ "$f" -nt "$f.gz" ] || gzip -kf9 "$f"; done' _
 }
 
 # Make gziped scripts
