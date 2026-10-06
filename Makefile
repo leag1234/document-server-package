@@ -161,11 +161,12 @@ else
 		ARCH_EXT := .zip
 		AR := 7z a -y
 		NGINX_CONF := /etc/nginx/
-		NGINX_LOG := /var/log/euro-office/documentserver/
-		NGINX_CASH := /var/cache/nginx/euro-office/documentserver/
-		DS_ROOT := /var/www/euro-office/documentserver/
-		DS_FILES := /var/lib/euro-office/documentserver/
-		DS_EXAMPLE := /var/www/euro-office/documentserver-example
+		DS_PREFIX := $(COMPANY_NAME_LOW)/$(PRODUCT_SHORT_NAME_LOW)
+		NGINX_LOG := /var/log/$(DS_PREFIX)/
+		NGINX_CASH := /var/cache/nginx/$(DS_PREFIX)/
+		DS_ROOT := /var/www/$(DS_PREFIX)/
+		DS_FILES := /var/lib/$(DS_PREFIX)/
+		DS_EXAMPLE := /var/www/$(DS_PREFIX)-example
 		DEV_NULL := /dev/null
 	endif
 	ifeq ($(UNAME_M),x86_64)
