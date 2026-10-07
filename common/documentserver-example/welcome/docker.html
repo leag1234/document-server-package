@@ -29,8 +29,8 @@
 </head>
 <body>
     <header>
-        <a href="https://github.com/Euro-Office" target="_blank">
-            <img src="css/logo.svg" alt="Euro-Office" height="28">
+        <a href="https://github.com/elixiroffice" target="_blank">
+            <img src="css/logo.svg" alt="ElixirOffice" height="28">
         </a>
     </header>
     <div class="gray-block">
@@ -39,9 +39,9 @@
             <p>To edit office documents and collaborate, integrate {{COMPANY_NAME}} Docs into your sync&share app.</p>
             <h2>Integration options</h2>
             <div class="links-block">
-                <a href="https://github.com/Euro-Office" target="_blank">Euro-Office</a>|
-                <a href="https://www.onlyoffice.com/all-connectors.aspx?utm_source=test_example&utm_medium=start_screen&utm_campaign=installation" target="_blank">Connectors for 3rd party apps</a>|
-                <a href="https://api.onlyoffice.com/docs/docs-api/get-started/basic-concepts/" target="_blank">Integration API for developers</a>
+                <a href="https://github.com/elixiroffice" target="_blank">ElixirOffice</a>|
+                <a href="https://github.com/elixiroffice" target="_blank">Connectors for 3rd party apps</a>|
+                <a href="https://github.com/elixiroffice" target="_blank">Integration API for developers</a>
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
         <p class="notice_text">A random secret is generated automatically if a custom secret has not been added during installation. To obtain the default secret, run this command:</p>
         <pre> sudo docker exec $(sudo docker ps -q) /var/www/{{COMPANY_NAME_LOW}}/documentserver/npm/json -f /etc/{{COMPANY_NAME_LOW}}/documentserver/local.json 'services.CoAuthoring.secret.session.string'</span></pre>
         <p class="notice_text notice_margin">You can replace the default secret with a custom key using Docker env.</p>
-        <p class="notice_text notice_margin">More information about JWT in the <a href="https://api.onlyoffice.com/docs/docs-api/additional-api/signature/">documentation.</a></p>
+        <p class="notice_text notice_margin">More information about JWT in the <a href="https://github.com/elixiroffice">documentation.</a></p>
     </div>
     <div>
         <div class="content-block">
@@ -76,7 +76,7 @@
             <pre>sudo docker exec $(sudo docker ps -q) sudo sed 's,autostart=false,autostart=true,' -i /etc/supervisor/conf.d/ds-adminpanel.conf</pre>
             <p>On first access, you'll need to complete initial setup using a bootstrap code from the server logs. The bootstrap code is valid for 1 hour and can be found by checking the Admin Panel logs.</p>
             <p>Access the bootstrap code:</p>
-            <pre>sudo docker exec $(sudo docker ps -q) cat /var/log/euro-office/documentserver/adminpanel/out.log</pre>
+            <pre>sudo docker exec $(sudo docker ps -q) cat /var/log/elixiroffice/documentserver/adminpanel/out.log</pre>
             <a href="../admin/">
                 <div class="button">GO TO ADMIN PANEL</div>
             </a>
@@ -87,7 +87,7 @@
         <div class="content-block">
             <h1>Getting help</h1>
             <p>
-                Create issues on <a href="https://github.com/Euro-Office/" target="_blank">GitHub</a>.
+                Create issues on <a href="https://github.com/elixiroffice/" target="_blank">GitHub</a>.
             </p>
             <footer>© Ascensio System SIA & Euro-Office {{year}}. All rights reserved.</footer>
         </div>

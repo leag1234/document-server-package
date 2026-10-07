@@ -2,7 +2,7 @@ PWD := $(shell pwd)
 CURL := curl -s -L -o
 TOUCH := touch
 
-COMPANY_NAME ?= EURO-OFFICE
+COMPANY_NAME ?= ELIXIROFFICE
 PRODUCT_NAME ?= DocumentServer
 PRODUCT_SHORT_NAME ?= $(firstword $(subst -, ,$(PRODUCT_NAME)))
 
@@ -10,10 +10,10 @@ COMPANY_NAME_LOW = $(shell echo $(COMPANY_NAME) | tr A-Z a-z | tr -s ' ' '-')
 PRODUCT_NAME_LOW = $(shell echo $(PRODUCT_NAME) | tr A-Z a-z)
 PRODUCT_SHORT_NAME_LOW = $(shell echo $(PRODUCT_SHORT_NAME) | tr A-Z a-z)
 
-PUBLISHER_NAME ?= Euro-Office
-PUBLISHER_URL ?= http://github.com/euro-office
-SUPPORT_URL ?= http://github.com/euro-office
-SUPPORT_MAIL ?= support@euro-office.com
+PUBLISHER_NAME ?= ElixirOffice
+PUBLISHER_URL ?= https://github.com/elixiroffice
+SUPPORT_URL ?= https://github.com/elixiroffice
+SUPPORT_MAIL ?= support@elixiroffice.com
 
 PRODUCT_VERSION ?= 0.0.0
 BUILD_NUMBER ?= 0
