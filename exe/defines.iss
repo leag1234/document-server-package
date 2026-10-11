@@ -1,22 +1,22 @@
-; -- ONLYOFFICE Defines --
+; -- ElixirOffice Defines --
 
-#define sCompanyName        'ONLYOFFICE'
-#define sIntCompanyName     'ONLYOFFICE'
+#define sCompanyName        'ElixirOffice'
+#define sIntCompanyName     'ElixirOffice'
 #define sProductName        'Document Server'
 #define sIntProductName     'DocumentServer'
 #define sPublisherName      'Ascensio System SIA'
 #define sAppCopyright       'Copyright (C) ' + GetDateTimeString('yyyy',,) + ' ' + sPublisherName
-#define sPublisherUrl       'http://www.onlyoffice.com'
-#define sSupportURL         'http://support.onlyoffice.com'
-#define sUpdatesURL         'http://www.onlyoffice.com'
-; #define sPublisherUrl       'https://www.onlyoffice.com/'
-; #define sSupportURL         'https://www.onlyoffice.com/support.aspx'
-; #define sUpdatesURL         'https://www.onlyoffice.com/'
+#define sPublisherUrl       'https://github.com/elixiroffice'
+#define sSupportURL         'https://github.com/elixiroffice'
+#define sUpdatesURL         'https://github.com/elixiroffice'
+; #define sPublisherUrl       'https://github.com/elixiroffice'
+; #define sSupportURL         'https://github.com/elixiroffice'
+; #define sUpdatesURL         'https://github.com/elixiroffice'
 
-#define sAppName            'ONLYOFFICE Document Server'
-#define sAppId              'ONLYOFFICE DocumentServer'
-#define sAppPath            'ONLYOFFICE\DocumentServer'
-#define sAppRegPath         'Software\ONLYOFFICE\DocumentServer'
+#define sAppName            'ElixirOffice Document Server'
+#define sAppId              'ElixirOffice DocumentServer'
+#define sAppPath            'ElixirOffice\DocumentServer'
+#define sAppRegPath         'Software\ElixirOffice\DocumentServer'
 
 #if SameText(EDITION, 'developer') | SameText(EDITION, 'enterprise')
 #define sProductName        sProductName + ' ' + UpperCase(Copy(EDITION,1,1)) + 'E'

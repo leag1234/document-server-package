@@ -1,7 +1,7 @@
 {
   "name": "installtools",
   "version": "0.0.0",
-  "homepage": "http://www.onlyoffice.com",
+  "homepage": "https://github.com/elixiroffice",
   "private": true,
   "dependencies": {
     "json": "^9.0.6",
