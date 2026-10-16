@@ -23,6 +23,16 @@ done
 
 HASH=${HASH:-$(date +'%Y.%m.%d-%H%M' | openssl md5 | awk '{print $2}')}
 
+# This value is written into nginx configuration and a sed expression.
+LC_ALL=C
+export LC_ALL
+case "$HASH" in
+    ''|*[!a-zA-Z0-9]*)
+        echo "Invalid cache hash: use ASCII letters and digits only." >&2
+        exit 1
+        ;;
+esac
+
 # Save the hash to a variable in the configuration file
 echo "set \$cache_tag \"$HASH\";" > /etc/nginx/includes/ds-cache.conf
 
